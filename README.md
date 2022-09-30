@@ -24,18 +24,18 @@
 
 # Steps For Contribution
 
-0. Star <a href="https://github.com/tanyagupta0201/Hacktoberfest-2022" title="this">this</a> repository.
+0. Star <a href="https://github.com/ShravaniAK/noter-js" title="this">this</a> repository.
 
-1. Fork <a href="https://github.com/tanyagupta0201/Hacktoberfest-2022" title="this">this</a> repository.
+1. Fork <a href="https://github.com/ShravaniAK/noter-js" title="this">this</a> repository.
 
 2. Clone the forked repository.
 ```css
-git clone https://github.com/<your-github-username>/Hacktoberfest-2022
+git clone https://github.com/<your-github-username>/noter-js
 ```
   
 3. Navigate to the project directory.
 ```py
-cd Hacktoberfest-2022
+cd noter-js
 ```
 
 4. Create a new branch.
