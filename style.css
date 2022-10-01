@@ -11,14 +11,13 @@
 }
 
 .search::placeholder {
-  font-size: 1.2rem;
+  font-size: 1.0rem;
 }
 
 .btn {
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .home {
-  font-size: 1.5rem;
+  font-size: 1.0rem;
 }
-
