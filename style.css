@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Lily+Script+One&family=Baloo+2&display=swap');
+
+* {
+  font-family: 'Baloo Bhaijaan 2', cursive;
+}
+
+.brand {
+  font-family: 'Lily Script One', cursive;
+  font-size: 2rem;
+}
+
+.search::placeholder {
+  font-size: 1.2rem;
+}
+
+.btn {
+  font-weight: 700;
+}
+
+.home {
+  font-size: 1.5rem;
+}
