@@ -1,12 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Lily+Script+One&family=Baloo+2&display=swap');
 
 * {
-  font-family: 'Baloo Bhaijaan 2', cursive;
+  font-family: 'Courier New', monospace;
+  /*Author Name:Om Gaydhane https://github.com/omgaydhane
+    Date Modified:01-10-2022
+  */
 }
 
 .brand {
-  font-family: 'Lily Script One', cursive;
+  font-family: 'Cantarell', sans-serif;
   font-size: 2rem;
+  /*Author Name:Om Gaydhane https://github.com/omgaydhane
+    Date Modified:01-10-2022
+  */
 }
 
 .search::placeholder {
