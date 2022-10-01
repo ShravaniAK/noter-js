@@ -6,9 +6,13 @@ addBtn.addEventListener("click" , function(e){
     let addTxt=document.getElementById('addTxt');
 
     notesObj = getNotes()
+    if(addTxt.value === ''){
+      alert("Error: Blank note. Add some text in your note to get it displayed");
+      return;
+    }
 
     notesObj.push(addTxt.value);
-    localStorage.setItem("notes", JSON.stringify(notesObj));
+    localStorage.setItemF("notes", JSON.stringify(notesObj));
     addTxt.value="";
     console.log(notesObj);
     showNotes();
