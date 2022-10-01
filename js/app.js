@@ -27,12 +27,12 @@ function showNotes(previewValue) {
 
     notesObj.forEach(function(element, index) {
       html += `
-              <div class="noteCard my-2 mx-2 card" style="width: 18rem;">
-                      <div class="card-body">
+              <div class="col-md-4 col-sm-6 col-12  pb-4">
+                      <div class="bg-white p-3 pb-0" >
                           <h5 class="card-title">Note ${index + 1}</h5>
                           <p class="card-text"> ${element}</p>
-                          <button id="${index}"onclick="editNote(this.id)" class="btn btn-warning">Edit Note</button>
-                          <button id="${index}"onclick="deleteNote(this.id)" class="btn btn-primary">Delete Note</button>
+                          <button id="${index}"onclick="editNote(this.id)" class="btn btn-warning mb-3">Edit Note</button>
+                          <button id="${index}"onclick="deleteNote(this.id)" class="btn btn-danger mb-3">Delete Note</button>
                       </div>
                   </div>`;
     });
