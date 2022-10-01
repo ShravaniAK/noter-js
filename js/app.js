@@ -76,6 +76,7 @@ search.addEventListener("input", function(){
     })
 })
 
+// Ripple Effect when Purple Buttons are clicked
 (function() { var cleanUp, debounce, i, len, ripple, rippleContainer, ripples, showRipple;
 
   debounce = function(func, delay) {
