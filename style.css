@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Lily+Script+One&family=Baloo+2&display=swap');
+
+* {
+  font-family: 'Courier New', monospace;
+  /*Author Name:Om Gaydhane https://github.com/omgaydhane
+    Date Modified:01-10-2022
+  */
+}
+
+.brand {
+  font-family: 'Cantarell', sans-serif;
+  font-size: 2rem;
+  /*Author Name:Om Gaydhane https://github.com/omgaydhane
+    Date Modified:01-10-2022
+  */
+}
+
+.search::placeholder {
+  font-size: 1.2rem;
+}
+
+.btn {
+  font-weight: 700;
+}
+
+.home {
+  font-size: 1.5rem;
+}
+
+footer{
+  text-align: center;
+  color: black;
+}
