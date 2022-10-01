@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Lily+Script+One&family=Baloo+2&display=swap');
 
 * {
-  font-family: 'Baloo Bhaijaan 2', cursive;
+  font-family: 'Courier New', monospace;
 }
 
 .brand {
-  font-family: 'Lily Script One', cursive;
+  font-family: 'Cantarell', sans-serif;
   font-size: 2rem;
 }
 
