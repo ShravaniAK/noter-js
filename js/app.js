@@ -23,7 +23,7 @@ function showNotes(previewValue) {
 
     notesObj.forEach(function(element, index) {
       html += `
-              <div class="noteCard my-2 mx-2 card" style="width: 18rem;">
+              <div class="noteCard my-4 mx-4 card" style="width: 18rem; box-shadow: 10px 10px 25px #888888;background: rgba(255,255,255, 0.1);">
                       <div class="card-body">
                           <h5 class="card-title">Note ${index + 1}</h5>
                           <p class="card-text"> ${element}</p>
