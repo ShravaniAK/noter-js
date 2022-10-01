@@ -93,8 +93,8 @@
     }
 
     .search_button {
-      background: #8e24aa;
-      width: 100px;
+      
+      width: 300px;
       border: 0;
     }
 
@@ -217,7 +217,7 @@
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 <div class="container">
   
-  <a class="navbar-brand" href="#">Noter JS</a>
+  <a class="navbar-brand" href="#">NOTER JS</a>
 
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -228,13 +228,13 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="home nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        <a class="home nav-link" href="#">HOME <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item active">
-        <a class="home nav-link" href="#">About <span class="sr-only">(current)</span></a>
+        <a class="home nav-link" href="#">ABOUT <span class="sr-only"></span></a>
       </li>
       <li class="nav-item active">
-        <a class="home nav-link" href="#">Contact <span class="sr-only">(current)</span></a>
+        <a class="home nav-link" href="#">CONTACT <span class="sr-only"></span></a>
       </li>
     </ul>
 
@@ -250,22 +250,24 @@
   </nav>
 
 
-  <div class="container my-3">
-    <h1>Welcome To Magic Notes</h1>
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">Add a note</h5>
+  <div class="container my-3 pt-3">
+    <h1><b>Welcome To Noter JS</b></h1>
+    <div class="" style="background-color: none !important;">
+      <div class="card-body p-0 bg-none" >
+        <!-- <h5 class="card-title">Add a note</h5> -->
         <div class="form-group">
-          <textarea class="form-control" id="addTxt" rows="3"></textarea>
+          <textarea class="form-control" id="addTxt" rows="3" placeholder="Enter a Note"></textarea>
         </div>
-        <button class="ml-lg-2 btn btn-success my-2 my-sm-0 search_button tx--white" id="addBtn" ripple="ripple">Add
+        <button class="ml-lg-0 btn btn-success my-2 my-sm-0 search_button tx--white" id="addBtn" ripple="ripple">Add
           Note</button>
       </div>
     </div>
-    <hr>
-    <h1>Your Notes</h1>
-    <hr>
-    <div id="notes" class="row container-fluid"> </div>
+    <br>
+    <h1><b>Your Notes</b></h1>
+    <br>
+    <div  class="container p-0">
+    <div id="notes" class="row"></div>  
+    </div>
   </div>
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
