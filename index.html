@@ -2,251 +2,291 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Notes App</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Noter JS</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    
-    <link href="https://fonts.googleapis.com/css2?family=Teko&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <!--Style for all new functions-->
-   <!--Style for font, body, navbar, buttons and search bar-->
-   <!-- Animated Backround fitting of theme-->
-   <!--Currently unused (for now) style for dropdown menu-->
-    <style>
-    *{
+  <link rel="stylesheet" href="css/index.css">
 
-      font-family: 'Ubuntu', sans-serif;
+  <link href="https://fonts.googleapis.com/css2?family=Teko&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz@1,8..144&display=swap" rel="stylesheet">
 
 
-	    -webkit-user-select: none;
-        -khtml-user-select: none;
-        -moz-user-select: -moz-none;
-        -o-user-select: none;
-        user-select: none;
-        
-	}
-  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!--Style for all new functions-->
+  <!--Style for font, body, navbar, buttons and search bar-->
+  <!-- Animated Backround fitting of theme-->
+  <!--Currently unused (for now) style for dropdown menu-->
+  <style>
+    * {
+
+      font-family: 'Roboto Serif', serif;
+
+
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: -moz-none;
+      -o-user-select: none;
+      user-select: none;
+
+    }
+
     body {
       background: linear-gradient(-45deg, #ee582a, #b01b54, #264deb, #23d5ab);
-    background-size: 400% 400%;
-    animation: gradient 15s ease infinite;
+      background-size: 400% 400%;
+      animation: gradient 15s ease infinite;
     }
+
     @keyframes gradient {
-    0% {
+      0% {
         background-position: 0% 50%;
-    }
-    50% {
+      }
+
+      50% {
         background-position: 100% 50%;
-    }
-    100% {
+      }
+
+      100% {
         background-position: 0% 50%;
-    }
-  }
-
-    h1{
-        color: #FFF;
+      }
     }
 
-	/*searchbox*/
+    h1 {
+      color: #FFF;
+    }
 
-		.custom_search{
-			color: white !important;
-			background: white;
-			border: 0;
-			border-radius: 0;
-			border-bottom: 2px solid #FFF;
-			width: 240px !important;
-		}
-		.custom_search:focus{
-			box-shadow: none;
-			background: transparent;
-			border-bottom:2px solid #FFF;
-		}
-		.custom_search + .search_span{
-			position: absolute;
-			bottom: 0;
-			width: 0;
-			left: 50%;
-			transition: width 0.5s, left 0.5s;
-		}
-		.custom_search:focus + .search_span{
-			width: 240px;
-			left: 0;
-			border-bottom: 2px solid #c128ea;			
-		}
-		.custom_search::placeholder{
-			color: #FFF !important;
-		}
+    /*searchbox*/
 
-		.search_button{
-			background: #8e24aa;
-			width: 100px;
-			border: 0;
-		}
-		.search_button:focus{
-			border: 0;
-			box-shadow: none;
-		}
-		.search_button:active{
-			background: #8e24aa !important;
-			box-shadow: none !important;
-		}
+    .custom_search {
+      color: white !important;
+      background: white;
+      border: 0;
+      border-radius: 0;
+      border-bottom: 2px solid #FFF;
+      width: 240px !important;
+    }
 
-		.search_button:hover{
-			background: #8e24aa;
-		}
+    .custom_search:focus {
+      box-shadow: none;
+      background: transparent;
+      border-bottom: 2px solid #FFF;
+    }
 
-/*ripple effect*/
+    .custom_search+.search_span {
+      position: absolute;
+      bottom: 0;
+      width: 0;
+      left: 50%;
+      transition: width 0.5s, left 0.5s;
+    }
 
-		.tx--white {
-  			color: #fff;
-		}
+    .custom_search:focus+.search_span {
+      width: 240px;
+      left: 0;
+      border-bottom: 2px solid #c128ea;
+    }
 
-[ripple] {
-  position: relative;
-  overflow: hidden;
-}
-[ripple] .ripple--container {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
-[ripple] .ripple--container span {
-  transform: scale(0);
-  border-radius: 100%;
-  position: absolute;
-  opacity: 0.30;
-  background-color: #fff;
-  animation: ripple 1000ms;
-}
-@-moz-keyframes ripple {
-  to {
-    opacity: 0;
-    transform: scale(2);
-  }
-}
-@-webkit-keyframes ripple {
-  to {
-    opacity: 0;
-    transform: scale(2);
-  }
-}
-@-o-keyframes ripple {
-  to {
-    opacity: 0;
-    transform: scale(2);
-  }
-}
-@keyframes ripple {
-  to {
-    opacity: 0;
-    transform: scale(2);
-  }
-}
+    .custom_search::placeholder {
+      color: #FFF !important;
+    }
 
-/*navbar*/
+    .search_button {
 
-.navbar{
-	background: #222 !important;
-	line-height: 2rem !important;	
-}
+      width: 300px;
+      border: 0;
+    }
 
-.navbar .navbar-brand{
-	color: #FFF !important;
-}
+    .search_button:focus {
+      border: 0;
+      box-shadow: none;
+    }
 
-.navbar-nav .active a{
-	color: #c128ea !important;
-}
+    .search_button:active {
+      background: #8e24aa !important;
+      box-shadow: none !important;
+    }
 
-.navbar-nav .nav-item .nav-link{
-	color: #FFF;
-}
-.dropdown-menu {
-	background: #22221E;
-}
-.dropdown-menu .dropdown-item{
-	color: #FFF;
-	transition: all 0.2s;
-}
-.dropdown-menu .dropdown-item:hover{
-	background: #8e24aa;
-	color: #FFF;
-}
-.navbar-toggler-icon{
-	color: #FFF !important;
-}
-.navbar-dark .navbar-toggler{
-	border-color: #FFFFFF !important;
-}
-    </style>    
+    .search_button:hover {
+      background: #8e24aa;
+    }
+
+    /*ripple effect*/
+
+    .tx--white {
+      color: #fff;
+    }
+
+    [ripple] {
+      position: relative;
+      overflow: hidden;
+    }
+
+    [ripple] .ripple--container {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+
+    [ripple] .ripple--container span {
+      transform: scale(0);
+      border-radius: 100%;
+      position: absolute;
+      opacity: 0.30;
+      background-color: #fff;
+      animation: ripple 1000ms;
+    }
+
+    @-moz-keyframes ripple {
+      to {
+        opacity: 0;
+        transform: scale(2);
+      }
+    }
+
+    @-webkit-keyframes ripple {
+      to {
+        opacity: 0;
+        transform: scale(2);
+      }
+    }
+
+    @-o-keyframes ripple {
+      to {
+        opacity: 0;
+        transform: scale(2);
+      }
+    }
+
+    @keyframes ripple {
+      to {
+        opacity: 0;
+        transform: scale(2);
+      }
+    }
+
+    /*navbar*/
+
+    .navbar {
+      background: #222 !important;
+      line-height: 2rem !important;
+    }
+
+    .navbar .navbar-brand {
+      color: #FFF !important;
+    }
+
+    .navbar-nav .active a {
+      color: #c128ea !important;
+    }
+
+    .navbar-nav .nav-item .nav-link {
+      color: #FFF;
+    }
+
+    .dropdown-menu {
+      background: #22221E;
+    }
+
+    .dropdown-menu .dropdown-item {
+      color: #FFF;
+      transition: all 0.2s;
+    }
+
+    .dropdown-menu .dropdown-item:hover {
+      background: #8e24aa;
+      color: #FFF;
+    }
+
+    .navbar-toggler-icon {
+      color: #FFF !important;
+    }
+
+    .navbar-dark .navbar-toggler {
+      border-color: #FFFFFF !important;
+    }
+  </style>
 
 </head>
 
 <body>
+  <!-- NAVIGATION BAR STARTS NAVIGATION BAR STARTS -->
+  <!-- NAVIGATION BAR STARTS NAVIGATION BAR STARTS -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+
+      <a class="navbar-brand" href="#">NOTER JS</a>
 
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-        <a class="navbar-brand" href="#">Magic Notes</a>
-
-
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="home nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-
-            </ul>
-
-
-            <form class="form-inline my-2 my-lg-0">
-                <input class="custom_search form-control mr-sm-2" id="searchTxt" type="search" placeholder="Search" aria-label="Search">
-                <button class="ml-lg-3 btn btn-success my-2 my-sm-0 search_button tx--white" type="submit" ripple="ripple">Search</button>
-            </form>
-        </div>
-    </nav>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="home nav-link" href="#">HOME <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="home nav-link" href="#">ABOUT <span class="sr-only"></span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="home nav-link" href="#">CONTACT <span class="sr-only"></span></a>
+          </li>
+        </ul>
 
 
-    <div class="container my-3">
-        <h1>Welcome To Magic Notes</h1>
-        <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">Add a note</h5>
-                <div class="form-group">
-                    <textarea class="form-control" id="addTxt" rows="3"></textarea>
-                </div>
-                <button class="ml-lg-2 btn btn-success my-2 my-sm-0 search_button tx--white" id="addBtn" ripple="ripple">Add Note</button>
-            </div>
-        </div>
-        <hr>
-        <h1>Your Notes</h1>
-        <hr>
-        <div id="notes" class="row container-fluid"> </div>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="custom_search form-control mr-sm-2" id="searchTxt" type="search" placeholder="Search"
+            aria-label="Search">
+          <button class="ml-lg-3 btn btn-success my-2 my-sm-0 search_button tx--white" type="submit"
+            ripple="ripple">Search</button>
+        </form>
+      </div>
     </div>
+  </nav>
+  <!-- NAVIGATION BAR ENDS NAVIGATION BAR ENDS -->
+  <!-- NAVIGATION BAR ENDS NAVIGATION BAR ENDS -->
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
-    <script src="js/app.js"></script>
+  <div class="container my-3 pt-3">
+    <h1><b>Welcome To Noter JS</b></h1>
+    <div class="" style="background-color: none !important;">
+      <div class="card-body p-0 bg-none">
+        <!-- <h5 class="card-title">Add a note</h5> -->
+        <div class="form-group">
+          <textarea class="form-control" id="addTxt" rows="3" placeholder="Enter a Note"></textarea>
+        </div>
+        <button class="ml-lg-0 btn btn-success my-2 my-sm-0 search_button tx--white" id="addBtn" ripple="ripple">Add
+          Note</button>
+      </div>
+    </div>
+    <br>
+    <h1><b>Checkout Your Notes</b></h1>
+
+    <div class="container p-0">
+      <div id="notes" class="row"></div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script src="js/app.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,24 @@
+{
+  "name": "noter-js",
+  "version": "1.0.0",
+  "description": "<br>\r <p align=\"center\">\r   <https://www.google.com/url?sa=i&url=https%3A%2F%2Fdev.to%2Fgithub%2Fhow-to-get-ready-for-hacktoberfest-2022-2ck2&psig=AOvVaw3ezI7pi39kHIEfe-GkedLX&ust=1664646042501000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCPCIsPOHvfoCFQAAAAAdAAAAABAD>\r </p>",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShravaniAK/noter-js.git"
+  },
+  "keywords": [
+    "noter",
+    "list",
+    "todo"
+  ],
+  "author": "Shravani Kaware",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ShravaniAK/noter-js/issues"
+  },
+  "homepage": "https://github.com/ShravaniAK/noter-js#readme"
+}
