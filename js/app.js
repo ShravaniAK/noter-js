@@ -61,7 +61,7 @@ function showNotes() {
     notesObj.forEach(function(note, index){
          html += `
                 <div class="col-md-4 col-sm-6 col-12  pb-4">
-                        <div class="bg-white p-3 pb-0" >
+                        <div class="bg-white rounded p-3 pb-0" >
                             <h5 class="card-title">${note.title ? note.title : `Note ${index+1}` }</h5>
                             <p class="card-text"> ${note.content}</p>
                             <button id="${index}"onclick="editNote(this.id)" class="btn btn-warning mb-3">Edit Note</button>
