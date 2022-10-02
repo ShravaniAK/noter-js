@@ -8,15 +8,16 @@ document.getElementById('addBtn').addEventListener("click" , function(e){
 
     notesObj = getNotes()
     if(addTxt.value === '' || addTxt.value===null){
-      SlimNotifierJs.notification('error', 'Error', 'Input Field cannot be blank', 3000);
+      SlimNotifierJs.notification('error', 'Error', 'Input Field cannot be blank.', 2000);
     }
 
     if(addTitle.value === '')
-      addTitle = false;
+      addTitle = true;
 
     notesObj.push({title: addTitle.value,content: addTxt.value});
     notesObj.forEach(function(note, index){
       notesObj[index].title = note.title ? note.title : `Note ${index+1}`
+   
     });
 
     localStorage.setItem("notes", JSON.stringify(notesObj));
