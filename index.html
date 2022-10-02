@@ -44,6 +44,19 @@
       animation: gradient 15s ease infinite;
     }
 
+    .button-container {
+      display: flex;
+    }
+
+    .button-container {
+      display: grid;
+    }
+
+    #editBtn,#addBtn {
+      grid-column: 1;
+      grid-row: 1;
+    }
+
     @keyframes gradient {
       0% {
         background-position: 0% 50%;
@@ -266,8 +279,14 @@
           <input class="form-control mb-4" id="addTitle" rows="1" placeholder="Enter a Title"></input>
           <textarea class="form-control" id="addTxt" rows="3" placeholder="Enter a Note"></textarea>
         </div>
-        <button class="ml-lg-0 btn btn-success my-2 my-sm-0 search_button tx--white" id="addBtn" ripple="ripple">Add
+
+        <div class="button-container">
+        <button class="btn btn-success search_button tx--white" id="addBtn" ripple="ripple">Add
           Note</button>
+           <button class="btn btn-success invisible search_button tx--white" id="editBtn" ripple="ripple">Edit
+          Note</button>
+        </div>
+
       </div>
     </div>
     <br>
