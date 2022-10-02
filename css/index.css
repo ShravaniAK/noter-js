@@ -36,6 +36,19 @@ h1 {
   color: #FFF;
 }
 
+   .button-container {
+      display: flex;
+    }
+
+    .button-container {
+      display: grid;
+    }
+
+    #editBtn,#addBtn {
+      grid-column: 1;
+      grid-row: 1;
+    }
+
 /*searchbox*/
 
 .custom_search {

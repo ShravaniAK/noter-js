@@ -1,9 +1,10 @@
-console.log("hello world");
 showNotes();
 
-let addBtn=document.getElementById('addBtn');
-addBtn.addEventListener("click" , function(e){
+let editIndex = 0;
+
+document.getElementById('addBtn').addEventListener("click" , function(e){
     let addTxt=document.getElementById('addTxt');
+    let addTitle=document.getElementById('addTitle');
 
     notesObj = getNotes()
     if(addTxt.value === ''){
@@ -11,17 +12,49 @@ addBtn.addEventListener("click" , function(e){
       return;
     }
 
-    notesObj.push(addTxt.value);
-    localStorage.setItem("notes", JSON.stringify(notesObj));
-    addTxt.value="";
-    console.log(notesObj);
-    showNotes();
-})
-function showNotes(previewValue) {
-    let addTxt = document.getElementById('addTxt');
-    addTxt.value = previewValue || ""
+    if(addTitle.value === '')
+      addTitle = false;
 
+    notesObj.push({title: addTitle.value,content: addTxt.value});
+    notesObj.forEach(function(note, index){
+      notesObj[index].title = note.title ? note.title : `Note ${index+1}`
+    });
+
+    localStorage.setItem("notes", JSON.stringify(notesObj));
+
+    showNotes(addTxt.value,"");
+    addTxt.value="";
+    addTitle.value="";
+
+    // console.log(notesObj);
+  
+})
+
+document.getElementById('editBtn').addEventListener("click",function(){
+
+  notesObj = getNotes();
+  notesObj[editIndex].content = document.getElementById('addTxt').value;
+  notesObj[editIndex].title = document.getElementById('addTitle').value;
+  localStorage.setItem("notes", JSON.stringify(notesObj));
+
+  document.getElementById('addTxt').value="";
+  document.getElementById('addTitle').value="";
+  editIndex=0;
+
+  showNotes();
+  document.getElementById('editBtn').classList.add("invisible")
+})
+
+function updateEdit(noteContent,noteTitle){
+    let addTxt = document.getElementById('addTxt');
+    let addTitle = document.getElementById('addTitle');
+
+    addTxt.value = noteContent || "";
+    addTitle.value = noteTitle || "";
+}
+function showNotes() {
     notesObj = getNotes()
+    console.log(notesObj)
 
     let html = "";
 
@@ -47,10 +80,11 @@ function showNotes(previewValue) {
   }
   
   function deleteNote(index) {
-
       notesObj = getNotes()
-
-      notesObj.splice(index, 1);
+      if(index!=0)
+        notesObj.splice(index, index);
+      else 
+        notesObj.splice(index,1);
       localStorage.setItem("notes", JSON.stringify(notesObj));
       showNotes();
   }
@@ -58,10 +92,15 @@ function showNotes(previewValue) {
 
     notesObj = getNotes()
 
-    let especificNote = notesObj[index]
-    notesObj.splice(index, 1);
-    localStorage.setItem("notes", JSON.stringify(notesObj));
-    showNotes(especificNote)
+    document.getElementById('editBtn').classList.remove("invisible");
+    let {title,content} = notesObj[index];
+    let addTxt = document.getElementById('addTxt');
+    let addTitle = document.getElementById('addTitle');
+
+    editIndex = index;
+
+    addTxt.value = content || "";
+    addTitle.value = title || "";
   }
   
   function getNotes(){
