@@ -65,11 +65,19 @@
     <div class="mt-5 mb-4" style="background-color: none !important;">
       <div class="card-body p-0 bg-none">
         <!-- <h5 class="card-title">Add a note</h5> -->
+        <div class="form-group">
+          <input class="form-control mb-4" id="addTitle" rows="1" placeholder="Enter a Title"></input>
         <div class="mb-4 form-group">
           <textarea class="form-control" id="addTxt" rows="3" placeholder="Enter a Note"></textarea>
         </div>
-        <button class="ml-lg-0 btn btn-success my-2 my-sm-0 search_button tx--white" id="addBtn" ripple="ripple">Add
-         a Note</button>
+
+        <div class="button-container">
+        <button class="btn btn-success search_button tx--white" id="addBtn" ripple="ripple">Add
+          Note</button>
+           <button class="btn btn-success invisible search_button tx--white" id="editBtn" ripple="ripple">Edit
+          Note</button>
+        </div>
+
       </div>
     </div>
     <br>
