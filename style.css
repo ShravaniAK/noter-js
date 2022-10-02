@@ -2,20 +2,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Lily+Script+One&family=Baloo+2&display=swap");
 
 * {
-  font-family: "Baloo Bhaijaan 2", cursive;
+  font-family: "Andale Mono", cursive;
 }
-
+//elliot37
 .brand {
   font-family: "Lily Script One", cursive;
   font-size: 2rem;
 }
 
 .search::placeholder {
-  font-size: 1.0rem;
+  font-size: 2.0rem;
 }
 
 .btn {
-  font-weight: 500;
+  font-weight: 50;
 }
 
 .home {

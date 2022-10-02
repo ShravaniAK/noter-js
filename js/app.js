@@ -12,7 +12,7 @@ addBtn.addEventListener("click" , function(e){
     }
 
     notesObj.push(addTxt.value);
-    localStorage.setItemF("notes", JSON.stringify(notesObj));
+    localStorage.setItem("notes", JSON.stringify(notesObj));
     addTxt.value="";
     console.log(notesObj);
     showNotes();
@@ -74,7 +74,7 @@ function showNotes(previewValue) {
   }
 
   let search = document.getElementById('searchTxt');
-search.addEventListener("input", function(){
+  search.addEventListener("input",()=>{
 
     let inputVal = search.value.toLowerCase();
     // console.log('Input event fired!', inputVal);
@@ -88,8 +88,8 @@ search.addEventListener("input", function(){
             element.style.display = "none";
         }
         // console.log(cardTxt);
+      })
     })
-})
 
 // Ripple Effect when Purple Buttons are clicked
 (function() { var cleanUp, debounce, i, len, ripple, rippleContainer, ripples, showRipple;
