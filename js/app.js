@@ -81,10 +81,7 @@ function showNotes() {
   
   function deleteNote(index) {
       notesObj = getNotes()
-      if(index!=0)
-        notesObj.splice(index, index);
-      else 
-        notesObj.splice(index,1);
+      notesObj.splice(index,1);
       localStorage.setItem("notes", JSON.stringify(notesObj));
       showNotes();
   }
