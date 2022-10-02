@@ -26,6 +26,7 @@ function showNotes(previewValue) {
     let html = "";
 
     notesObj.forEach(function(element, index) {
+      document.getElementById("notes").classList.remove("margin")
       html += `
               <div class="col-md-4 col-sm-6 col-12  pb-4">
                       <div class="bg-white p-3 pb-0" >
@@ -40,7 +41,8 @@ function showNotes(previewValue) {
     if (notesObj.length != 0) {
       notesElm.innerHTML = html;
     } else {
-      notesElm.innerHTML = `  <font color="#FFFFFF">Nothing to show! Use "Add a Note" section above to add notes.</font>`;
+      document.getElementById("notes").classList.add("margin")
+      notesElm.innerHTML = `  <font color="#FFFFFF">Nothing to show! Write some notes.</font>`;
     }
   }
   

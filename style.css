@@ -1,14 +1,14 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Lily+Script+One&family=Baloo+2&display=swap");
-
+/* 
 * {
   font-family: "Andale Mono", cursive;
 }
-//elliot37
-.brand {
+//elliot37 */
+/* .brand {
   font-family: "Lily Script One", cursive;
   font-size: 2rem;
-}
+} */
 
 .search::placeholder {
   font-size: 2.0rem;
@@ -20,4 +20,8 @@
 
 .home {
   font-size: 1.0rem;
+}
+
+.margin{
+  margin-left: 4px;
 }
