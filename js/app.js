@@ -7,9 +7,8 @@ document.getElementById('addBtn').addEventListener("click" , function(e){
     let addTitle=document.getElementById('addTitle');
 
     notesObj = getNotes()
-    if(addTxt.value === ''){
-      alert("Error: Blank note. Add some text in your note to get it displayed");
-      return;
+    if(addTxt.value === '' || addTxt.value===null){
+      SlimNotifierJs.notification('error', 'Error', 'Input Field cannot be blank', 3000);
     }
 
     if(addTitle.value === '')
