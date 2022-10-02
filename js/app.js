@@ -1,9 +1,9 @@
-console.log("hello world");
 showNotes();
 
 let addBtn=document.getElementById('addBtn');
 addBtn.addEventListener("click" , function(e){
     let addTxt=document.getElementById('addTxt');
+    let addTitle=document.getElementById('addTitle');
 
     notesObj = getNotes()
     if(addTxt.value === ''){
@@ -11,30 +11,40 @@ addBtn.addEventListener("click" , function(e){
       return;
     }
 
-    notesObj.push(addTxt.value);
+    if(addTitle.value === '')
+      addTitle = false;
+
+    notesObj.push({title: addTitle.value,content: addTxt.value});
     localStorage.setItem("notes", JSON.stringify(notesObj));
+
+    showNotes(addTxt.value,"");
     addTxt.value="";
-    console.log(notesObj);
-    showNotes();
+    addTitle.value="";
+
+    // console.log(notesObj);
+  
 })
-function showNotes(previewValue) {
+function showNotes(noteContent,noteTitle) {
     let addTxt = document.getElementById('addTxt');
-    addTxt.value = previewValue || ""
+    addTxt.value = noteContent || ""
+    addTitle.value = noteTitle || ""
 
     notesObj = getNotes()
 
     let html = "";
 
-    notesObj.forEach(function(element, index) {
-      html += `
-              <div class="col-md-4 col-sm-6 col-12  pb-4">
-                      <div class="bg-white p-3 pb-0" >
-                          <h5 class="card-title">Note ${index + 1}</h5>
-                          <p class="card-text"> ${element}</p>
-                          <button id="${index}"onclick="editNote(this.id)" class="btn btn-warning mb-3">Edit Note</button>
-                          <button id="${index}"onclick="deleteNote(this.id)" class="btn btn-danger mb-3">Delete Note</button>
-                      </div>
-                  </div>`;
+    notesObj.forEach(function(note, index) {
+         html += `
+                <div class="col-md-4 col-sm-6 col-12  pb-4">
+                        <div class="bg-white p-3 pb-0" >
+                            <h5 class="card-title">${note.title ? note.title : `Note ${index+1}` }</h5>
+                            <p class="card-text"> ${note.content}</p>
+                            <button id="${index}"onclick="editNote(this.id)" class="btn btn-warning mb-3">Edit Note</button>
+                            <button id="${index}"onclick="deleteNote(this.id)" class="btn btn-danger mb-3">Delete Note</button>
+                        </div>
+                    </div>`;
+                  
+        
     });
     let notesElm = document.getElementById("notes");
     if (notesObj.length != 0) {
@@ -59,7 +69,7 @@ function showNotes(previewValue) {
     let especificNote = notesObj[index]
     notesObj.splice(index, 1);
     localStorage.setItem("notes", JSON.stringify(notesObj));
-    showNotes(especificNote)
+    showNotes(especificNote.content,especificNote.title)
   }
   
   function getNotes(){
