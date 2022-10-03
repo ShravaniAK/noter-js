@@ -11,14 +11,14 @@ document.getElementById('addBtn').addEventListener("click" , function(e){
       SlimNotifierJs.notification('error', 'Error', 'Input Field cannot be blank.', 2000);
     }
 
-    if(addTitle.value === '')
-      addTitle = true;
+    else {
 
+SlimNotifierJs.notification('success', 'Success', 'Note added successfully.', 3000, false);
     notesObj.push({title: addTitle.value,content: addTxt.value});
     notesObj.forEach(function(note, index){
       notesObj[index].title = note.title ? note.title : `Note ${index+1}`
    
-    });
+    })};
 
     localStorage.setItem("notes", JSON.stringify(notesObj));
 
