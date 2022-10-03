@@ -58,24 +58,24 @@ function showNotes() {
 
     let html = "";
 
-    notesObj.forEach(function(note, index){
-         html += `
-                <div class="col-md-4 col-sm-6 col-12  pb-4">
-                        <div class="bg-white p-3 pb-0" >
-                            <h5 class="card-title">${note.title ? note.title : `Note ${index+1}` }</h5>
-                            <p class="card-text"> ${note.content}</p>
-                            <button id="${index}"onclick="editNote(this.id)" class="btn btn-warning mb-3">Edit Note</button>
-                            <button id="${index}"onclick="deleteNote(this.id)" class="btn btn-danger mb-3">Delete Note</button>
-                        </div>
-                    </div>`;
-                  
-        
+    notesObj.forEach(function(element, index) {
+      document.getElementById("notes").classList.remove("margin")
+      html += `
+              <div class="col-md-4 col-sm-6 col-12  pb-4">
+                      <div class="bg-white p-3 pb-0" >
+                          <h5 class="card-title">Note ${index + 1}</h5>
+                          <p class="card-text"> ${element}</p>
+                          <button id="${index}"onclick="editNote(this.id)" class="btn btn-warning mb-3">Edit Note</button>
+                          <button id="${index}"onclick="deleteNote(this.id)" class="btn btn-danger mb-3">Delete Note</button>
+                      </div>
+                  </div>`;
     });
     let notesElm = document.getElementById("notes");
     if (notesObj.length != 0) {
       notesElm.innerHTML = html;
     } else {
-      notesElm.innerHTML = `  <font color="#FFFFFF">Nothing to show! Use "Add a Note" section above to add notes.</font>`;
+      document.getElementById("notes").classList.add("margin")
+      notesElm.innerHTML = `  <font color="#FFFFFF">Nothing to show! Write some notes.</font>`;
     }
   }
   

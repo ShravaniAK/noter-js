@@ -53,7 +53,7 @@ h1 {
 
 .custom_search {
   color: white !important;
-  background: white;
+  background: transparent;
   border: 0;
   border-radius: 0;
   border-bottom: 2px solid #FFF;
