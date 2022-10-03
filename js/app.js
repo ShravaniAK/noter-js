@@ -13,7 +13,7 @@ document.getElementById('addBtn').addEventListener("click" , function(e){
 
     else {
 
-SlimNotifierJs.notification('success', 'Success', 'Note added successfully.', 3000, false);
+SlimNotifierJs.notification('success', 'Success', 'Note added successfully.', 2000, false);
     notesObj.push({title: addTitle.value,content: addTxt.value});
     notesObj.forEach(function(note, index){
       notesObj[index].title = note.title ? note.title : `Note ${index+1}`
