@@ -22,9 +22,9 @@ SlimNotifierJs.notification('success', 'Success', 'Note added successfully.', 20
 
     localStorage.setItem("notes", JSON.stringify(notesObj));
 
-    showNotes(addTxt.value,"");
-    addTxt.value="";
-    addTitle.value="";
+    showNotes(addTxt.value, "");
+    addTxt.value = "";
+    addTitle.value = "";
 
     // console.log(notesObj);
   
@@ -37,8 +37,8 @@ document.getElementById('editBtn').addEventListener("click",function(){
   notesObj[editIndex].title = document.getElementById('addTitle').value;
   localStorage.setItem("notes", JSON.stringify(notesObj));
 
-  document.getElementById('addTxt').value="";
-  document.getElementById('addTitle').value="";
+  document.getElementById('addTxt').value= "";
+  document.getElementById('addTitle').value = "";
   editIndex=0;
 
   showNotes();
@@ -63,8 +63,9 @@ function showNotes() {
       html += `
               <div class="col-md-4 col-sm-6 col-12  pb-4">
                       <div class="bg-white p-3 pb-0" >
-                          <h5 class="card-title">Note ${index + 1}</h5>
-                          <p class="card-text"> ${element}</p>
+                          <!-- <h5 class="card-title">Note ${index + 1}</h5> !-->
+                          <h5 class="card-title"> ${element.title}</h5>
+                          <p class="card-text"> ${element.content}</p>
                           <button id="${index}"onclick="editNote(this.id)" class="btn btn-warning mb-3">Edit Note</button>
                           <button id="${index}"onclick="deleteNote(this.id)" class="btn btn-danger mb-3">Delete Note</button>
                       </div>
