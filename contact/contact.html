@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://kit.fontawesome.com/c8338092a9.js" crossorigin="anonymous"></script>
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="../css/contact.css">
+  <link rel="stylesheet" href="../css/index.css">
+
+</head>
+
+<body>
+  <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+
+      <a class="navbar-brand" href="/">NOTER JS</a>
+
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="home nav-link" href="/">HOME <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="home nav-link" href="../about/about.html">ABOUT <span class="sr-only"></span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="home nav-link" href="contact.html">CONTACT <span class="sr-only"></span></a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0" style="margin-left: 25%;">
+          <input class="custom_search mr-sm-2" id="searchTxt" type="search" placeholder="Search" aria-label="Search"
+            style="display: span;">
+          <button class="ml-lg-3 btn btn-success my-2 my-sm-0 search_button tx--white" type="submit"
+            ripple="ripple">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+  <section id="contact">
+    <h1 class="section-header">Contact</h1>
+    <div class="contact-wrapper row">
+      <div class="col-sm-6">
+        <img src="https://o.remove.bg/downloads/1c1a18a9-7d20-4328-ac2d-edf4e18ee8be/image-removebg-preview.png" />
+      </div>
+
+      <form id="contact-form" class="form col-sm-6" role="form">
+
+        <div class="form-group">
+          <div class="col-sm-12">
+            <input type="text" class="form-control" id="name" placeholder="NAME" name="name" value="" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="col-sm-12">
+            <input type="email" class="form-control" id="email" placeholder="EMAIL" name="email" value="" required>
+          </div>
+        </div>
+
+        <textarea class="form-control" rows="10" placeholder="MESSAGE" name="message" required></textarea>
+        <div class="send-btn">
+          <button class="btn btn-primary send-button" id="submit" type="submit" value="SEND">
+            <div class="alt-send-button">
+              <i class="fa fa-paper-plane"></i><span class="send-text">SEND</span>
+            </div>
+
+          </button>
+        </div>
+
+      </form>
+
+
+    </div>
+  </section>
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

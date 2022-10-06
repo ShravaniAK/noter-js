@@ -19,7 +19,7 @@
   <!-- Animated Backround fitting of theme-->
   <!--Currently unused (for now) style for dropdown menu-->
   <link rel="stylesheet" href="css/index.css">
-  <link rel="stylesheet" href="./style.css" >
+  <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
@@ -28,7 +28,7 @@
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
 
-      <a class="navbar-brand" href="#">NOTER JS</a>
+      <a class="navbar-brand" href="/">NOTER JS</a>
 
 
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -39,20 +39,19 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="home nav-link" href="#">HOME <span class="sr-only">(current)</span></a>
+            <a class="home nav-link" href="/">HOME <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item active">
-            <a class="home nav-link" href="#">ABOUT <span class="sr-only"></span></a>
+            <a class="home nav-link" href="about/about.html">ABOUT <span class="sr-only"></span></a>
           </li>
           <li class="nav-item active">
-            <a class="home nav-link" href="contact.html">CONTACT <span class="sr-only"></span></a>
+            <a class="home nav-link" href="contact/contact.html">CONTACT <span class="sr-only"></span></a>
           </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
           <input class="custom_search form-control mr-sm-2" id="searchTxt" type="search" placeholder="Search"
             aria-label="Search">
-          <button class="ml-lg-3 btn btn-success my-2 my-sm-0 tx--white" type="submit"
-            ripple="ripple">Search</button>
+          <button class="ml-lg-3 btn btn-success my-2 my-sm-0 tx--white" type="submit" ripple="ripple">Search</button>
         </form>
       </div>
     </div>
@@ -67,14 +66,15 @@
         <!-- <h5 class="card-title">Add a note</h5> -->
         <div class="form-group">
           <input class="form-control mb-4" id="addTitle" rows="1" placeholder="Enter a Title"></input>
-          <textarea class="form-control" id="addTxt" rows="3" placeholder="Enter a Note" style="min-height:40px"></textarea>
+          <textarea class="form-control" id="addTxt" rows="3" placeholder="Enter a Note"
+            style="min-height:40px"></textarea>
         </div>
 
         <div class="button-container">
           <button class="ml-lg-0 btn btn-success my-2 my-sm-0 tx--white" id="addBtn" ripple="ripple">Add
-          Note</button>
+            Note</button>
           <button class="btn btn-success invisible search_button tx--white" id="editBtn" ripple="ripple">Edit
-          Note</button>
+            Note</button>
         </div>
       </div>
     </div>
