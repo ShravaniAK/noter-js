@@ -86,11 +86,13 @@ function deleteNote(index) {
   localStorage.setItem("notes", JSON.stringify(notesObj));
   showNotes();
 }
+
 function editNote(index) {
 
   notesObj = getNotes()
 
   document.getElementById('editBtn').classList.remove("invisible");
+  console.log(document.getElementById('addBtn').value);
   let { title, content } = notesObj[index];
   let addTxt = document.getElementById('addTxt');
   let addTitle = document.getElementById('addTitle');

@@ -227,7 +227,14 @@
     .navbar-dark .navbar-toggler {
       border-color: #FFFFFF !important;
     }
-    #addBtn{
-  max-width:30vw;
+
+.addBtn{
+  max-width:15vw;
+  margin-left: 100px;
+}
+
+.editBtn {
+  max-width: 15vw;
+  margin-left:250px;
 }
 
