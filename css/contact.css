@@ -25,7 +25,6 @@
   
   .form-control, 
   textarea {
-    max-width: 80%;
     background-color: #fff;
     color: #000;
     letter-spacing: 1px;
@@ -34,7 +33,7 @@
   .send-button {
     margin-top: 15px;
     height: 34px;
-    width: 80%;
+    width: 100%;
     overflow: hidden;
     transition: all .2s ease-in-out;
   }
@@ -63,16 +62,3 @@
   .alt-send-button:hover {
     transform: translate3d(0px, -29px, 0px);
   }
-
-  input {
-    margin-bottom: 3%;
-  }
-
-  /* Begin Media Queries*/
-  @media screen and (max-width: 550px) {
-    textarea, input{
-        margin-left: 5%;
-    }
-   
-  }
-  
