@@ -16,10 +16,13 @@
     color: #000;
     text-transform: uppercase;
     letter-spacing: 6px;
+    font-family: 'IBM Plex Sans', serif;
+
   }
   
-  img {
-    width: 100%;
+  .img{
+    width: 70%;
+    padding: 1rem 0 1rem 8rem;
   }
 
   
@@ -73,6 +76,9 @@
     textarea, input{
         margin-left: 5%;
     }
-   
+    .img{
+      width: 60%;
+      
+    }
   }
   
