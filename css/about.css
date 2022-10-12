@@ -2,6 +2,8 @@ body {
     background: linear-gradient(-45deg, #ee582a, #b01b54, #264deb, #23d5ab);
     background-size: 2000px 2000px;
     animation: gradient 15s ease infinite;
+    font-family: 'IBM Plex Sans', serif;
+    
 }
 
 .about-container{
