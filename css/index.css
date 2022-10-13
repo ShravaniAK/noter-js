@@ -1,7 +1,7 @@
 
 * {
 
-  font-family: 'Roboto Serif', serif;
+  font-family: 'IBM Plex Sans', serif;
 
 
   -webkit-user-select: none;
@@ -96,12 +96,14 @@ h1 {
 }
 
 .search_button:active {
-  background: #8e24aa !important;
+  background: #8e24aa; !important;
   box-shadow: none !important;
 }
 
 .search_button:hover {
-  background: #8e24aa;
+  background:#f9f9f9;
+   
+  
 }
 
 /*ripple effect*/

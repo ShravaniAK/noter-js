@@ -16,10 +16,13 @@
     color: #000;
     text-transform: uppercase;
     letter-spacing: 6px;
+    font-family: 'IBM Plex Sans', serif;
+
   }
   
-  img {
-    width: 100%;
+  .img{
+    width: 70%;
+    padding: 1rem 0 1rem 8rem;
   }
 
   
@@ -62,3 +65,19 @@
   .alt-send-button:hover {
     transform: translate3d(0px, -29px, 0px);
   }
+
+  input {
+    margin-bottom: 3%;
+  }
+
+  /* Begin Media Queries*/
+  @media screen and (max-width: 550px) {
+    textarea, input{
+        margin-left: 5%;
+    }
+    .img{
+      width: 60%;
+      
+    }
+  }
+  
