@@ -1,7 +1,7 @@
 
 * {
 
-  font-family: 'IBM Plex Sans', serif;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
 
 
   -webkit-user-select: none;
@@ -96,7 +96,7 @@ h1 {
 }
 
 .search_button:active {
-  background: #8e24aa; !important;
+  background: #8e24aa !important;
   box-shadow: none !important;
 }
 
