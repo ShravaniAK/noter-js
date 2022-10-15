@@ -401,7 +401,7 @@ h1 {
 }
 
 .search_button:active {
-  background: #8e24aa; !important;
+  background: #8e24aa !important;
   box-shadow: none !important;
 }
 
