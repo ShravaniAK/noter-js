@@ -19,9 +19,16 @@
     font-family: 'IBM Plex Sans', serif;
 
   }
-  
+  .contact-wrapper{
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content: center;
+  }
+
   .img{
-    width: 70%;
+    width: 90%;
+    height:auto;
     padding: 1rem 0 1rem 8rem;
   }
 

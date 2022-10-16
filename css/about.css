@@ -1,15 +1,13 @@
-* {
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500&display=swap');
 
-    font-family: 'IBM Plex Sans', serif;
-  
-  
+* {  
     -webkit-user-select: none;
     -khtml-user-select: none;
     -moz-user-select: -moz-none;
     -o-user-select: none;
-    user-select: none;
-  
+    user-select: none; 
   }
+
 
 
 body {
@@ -18,7 +16,7 @@ body {
     background-size: 4000% 4000%;
     border-image-repeat: no-repeat;
     animation: gradient 15s ease infinite;
-    font-family: 'IBM Plex Sans', serif;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
     
 }
 @keyframes gradient {
@@ -54,6 +52,10 @@ body {
     display: inline-block;
     background-color: black;
     margin-bottom: 20px;
+}
+
+.desc {
+    color: #FFF;
 }
 
 .about-btn{
