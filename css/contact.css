@@ -35,7 +35,6 @@
   
   .form-control, 
   textarea {
-    max-width: 80%;
     background-color: #fff;
     color: #000;
     letter-spacing: 1px;
@@ -44,7 +43,7 @@
   .send-button {
     margin-top: 15px;
     height: 34px;
-    width: 80%;
+    width: 100%;
     overflow: hidden;
     transition: all .2s ease-in-out;
   }
@@ -409,7 +408,7 @@ h1 {
 }
 
 .search_button:active {
-  background: #8e24aa; !important;
+  background: #8e24aa !important;
   box-shadow: none !important;
 }
 
