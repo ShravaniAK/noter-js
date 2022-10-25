@@ -34,14 +34,13 @@
 
       <a class="navbar-brand" href="/">NOTER JS</a>
 
-
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
+        <ul class="navbar-nav mr-auto" style="width: 70%;">
           <li class="nav-item active">
             <a class="home nav-link" href="/">HOME <span class="sr-only">(current)</span></a>
           </li>
@@ -52,10 +51,9 @@
             <a class="home nav-link" href="contact.html">CONTACT US<span class="sr-only"></span></a>
           </li>
         </ul>
-        <form class="form-inline my-2 my-lg-0" style="margin-left: 25%;">
-          <input class="custom_search mr-sm-2" id="searchTxt" type="search" placeholder="Search" aria-label="Search"
-            style="display: span;">
-          <button class="ml-lg-3 btn btn-success my-2 my-sm-0 search_button tx--white" type="submit"
+        <form class="form-inline d-flex justify-content-end my-2 my-lg-0">
+          <input class="custom_search form-control m-2" id="searchTxt" type="search" placeholder="Search" aria-label="Search">
+          <button class="ml-lg-3 btn btn-success my-2 my-sm-0 tx--white" type="submit"
             ripple="ripple">Search</button>
         </form>
       </div>
@@ -63,25 +61,27 @@
   </nav>
   <section id="contact">
     <h1 class="section-header">Contact Us</h1>
-    <div class="contact-wrapper row">
+    <div class="contact-wrapper row p-3">
       <div class="col-sm-6">
         <img class="img" src="contact.png" />
       </div>
 
       <form id="contact-form" class="form col-sm-6" role="form">
 
-        <div class="form-group">
+        <div class="form-group mb-3">
           <div class="col-sm-12">
             <i class="fa fa-user"></i>
             <input type="text" class="form-control" id="name" placeholder="NAME" name="name" value="" required>
-          </div>
         </div>
 
-        <div class="form-group">
+        <div class="form-group mb-3">
           <div class="col-sm-12">
             <i class="fa fa-at" aria-hidden="true"></i>
             <input type="email" class="form-control" id="email" placeholder="EMAIL" name="email" value="" required>
-          </div>
+        </div>
+
+        <div class="form-group mb-3">
+            <textarea class="form-control" rows="10" placeholder="MESSAGE" name="message" required></textarea>
         </div>
         <i class="fa fa-envelope"></i>
         <textarea class="form-control" rows="8" placeholder="MESSAGE" name="message" required></textarea>
@@ -90,15 +90,12 @@
             <div class="alt-send-button">
               <i class="fa fa-paper-plane"></i><span class="send-text">SEND</span>
             </div>
-
           </button>
         </div>
-
       </form>
-
-
     </div>
   </section>
+
   <!-- JavaScript Bundle with Popper -->
     <script src="js/slim_notifier.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
