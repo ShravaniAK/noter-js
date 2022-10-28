@@ -60,39 +60,46 @@
     </div>
   </nav>
   <section id="contact">
-    <h1 class="section-header">Contact Us</h1>
-    <div class="contact-wrapper row p-3">
-      <div class="col-sm-6">
-        <img class="img" src="contact.png" />
+    <div class="contain">
+
+      <div class="wrapper">
+    
+        <div class="form">
+          <h4>GET IN TOUCH</h4>
+          <h2 class="form-headline">Send us a message</h2>
+          <form id="submit-form" action="">
+            <p>
+              <input id="name" class="form-input" type="text" placeholder="Your Name*">
+              <small class="name-error"></small>
+            </p>
+            <p>
+              <input id="email" class="form-input" type="email" placeholder="Your Email*">
+              <small class="name-error"></small>
+            </p>
+            <p class="full-width">
+              <input id="Subject" class="form-input" type="text" placeholder="Subject*" required>
+              <small></small>
+            </p>
+            <p class="full-width">
+              <textarea   id="message" cols="30" rows="7" placeholder="Your Message*" required></textarea>
+              <small></small>
+            </p>
+            <p class="full-width">
+              <input type="submit" class="submit-btn" value="Submit">
+            </p>
+          </form>
+        </div>
+    
+        <div class="contacts contact-wrapper">
+    
+          <ul>
+            <span class="hightlight-contact-info">
+              <li class="email-info"><i class="fa fa-envelope" aria-hidden="true"></i> info@noterJS.com</li>
+              <li><i class="fa fa-phone" aria-hidden="true"></i> <span class="highlight-text">+91 10 1231 2670</span></li>
+            </span>
+          </ul>
+        </div>
       </div>
-
-      <form id="contact-form" class="form col-sm-6" role="form">
-
-        <div class="form-group mb-3">
-          <div class="col-sm-12">
-            <i class="fa fa-user"></i>
-            <input type="text" class="form-control" id="name" placeholder="NAME" name="name" value="" required>
-        </div>
-
-        <div class="form-group mb-3">
-          <div class="col-sm-12">
-            <i class="fa fa-at" aria-hidden="true"></i>
-            <input type="email" class="form-control" id="email" placeholder="EMAIL" name="email" value="" required>
-        </div>
-
-        <div class="form-group mb-3">
-            <textarea class="form-control" rows="10" placeholder="MESSAGE" name="message" required></textarea>
-        </div>
-        <i class="fa fa-envelope"></i>
-        <textarea class="form-control" rows="8" placeholder="MESSAGE" name="message" required></textarea>
-        <div class="send-btn">
-          <button class="btn btn-primary send-button" id="submit" type="submit" value="SEND">
-            <div class="alt-send-button">
-              <i class="fa fa-paper-plane"></i><span class="send-text">SEND</span>
-            </div>
-          </button>
-        </div>
-      </form>
     </div>
   </section>
 
