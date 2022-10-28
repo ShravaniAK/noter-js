@@ -202,3 +202,11 @@ h1 {
 .navbar-dark .navbar-toggler {
   border-color: #FFFFFF !important;
 }
+
+.bg-white{
+  height: 100%;
+  box-shadow: 10px 10px 0 black;
+}
+.bg-white:hover{
+  box-shadow: 10px 10px 10px black;
+}
