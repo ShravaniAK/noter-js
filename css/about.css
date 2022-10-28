@@ -37,15 +37,26 @@ body {
     color: #FFF;
   }
 .about-container{
-    position: absolute;
-    top: 20%;
-    bottom: 20%;
-    left: 25%;
-    right: 25%;
+    margin-top: 20%;
+    margin-bottom: 20%;
+    margin-left: 25%;
+    margin-right: 25%;
     text-align: center;
     font-size: 1.5em;
+    background: rgba( 255, 255, 255, 0.25 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 4px );
+-webkit-backdrop-filter: blur( 4px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+padding: 20px 40px;
 }
 
+.about-container img{
+    height: 200px;
+    width: 250px;
+    margin: 20px 20px;
+}
 .line {
     width: 110px;
     height: 2px;
