@@ -88,3 +88,31 @@ button:hover{
     transition: 0.5s ease;
 }
 
+@media(max-width:800px)
+{
+  .about-container{
+    width: 65%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+}
+
+@media(max-width:680px)
+{
+  .about-container{
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+}
+@media(max-width:550px)
+{
+  .about-container{
+    width: 29rem;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
