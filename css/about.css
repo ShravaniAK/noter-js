@@ -9,10 +9,23 @@
   }
 
 
+  ::-webkit-scrollbar{
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track{
+    background:transparent;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    border-radius: 100px;
+    background:transparent;
+    border: 6px solid rgba(0, 0, 0, 0.2);
+  }
 
 body {
 
-    background: linear-gradient(-45deg, #ee582a, #b01b54, #264deb, #23d5ab);
+    background: linear-gradient(-45deg, #ee582a, #b01b54, #3860ff, #23d5ab);
     background-size: 4000% 4000%;
     border-image-repeat: no-repeat;
     animation: gradient 15s ease infinite;
